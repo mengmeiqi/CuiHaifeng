@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>activity</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/activity.css"/>
+</head>
+<body>
+    <div id="container">
+        <div class="wrap">
+            <div id="banner">
+                <ul class="intro">
+                    <li><a href="enter.html">首&nbsp&nbsp&nbsp&nbsp页</a></li>
+                    <li><a href="index.html">基本资料</a></li>
+                    <li><a href="hobby.html">个人爱好</a></li>
+                    <li><a href="skill.html">个人技能</a></li>
+                    <li class="selected"><a href="activity.html">参加活动</a></li>
+                </ul>
+            </div>
+            <div id="turns">
+                <div class="wrap">
+                    <div id="imgs">
+                        <img class="selected" src="image/41.jpg" alt=""/>
+                        <img src="image/40.jpg" alt=""/>
+                        <img src="image/42.jpg" alt=""/>
+                        <img src="image/43.jpg" alt=""/>
+                    </div>
+                    <ul id="number">
+                        <li class="selected">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                    <div id="direction">
+                        <div id="left">&lt</div>
+                        <div id="right">&gt</div>
+                    </div>
+                </div>
+            </div>
+            <div id="content">
+                <h1>校内活动</h1>
+                <h2>团总支--创新实践部</h2>
+                <p>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp创新实践部就是一个帮助同学们提高综合素质，增强创新创业及就业能力的部门。创实成立以来，一直致力于创新创业工作中，为大学生将来工作创业提供了一个良好的跳板。经过部门成员的不断努力，创实已经成为一个综合发展的部门，在学院各种活动中起着重要作用。在这里，可以组织各种有趣又有意义的活动。创梦盛典，带你走进梦的殿堂；头脑风暴大赛，让你的智慧在激情中闪光；职业生涯规划，规划出事业的蓝图！同时，部门通过撰写各种策划案以提高必要的文案编写和组织策划能力，让你在未来的求职道路上过关斩将，突出重围。
+                </p>
+                <h2>参与举办校园营销大赛</h2>
+                <p>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp帮助策划和布置的一些工作，在工作中体会到忙碌的快乐，和伙伴们一起完成很多任务。并且参与比赛，在比赛中得到了很多锻炼，更加丰富自己的知识，提高了自己的实践能力。
+                </p>
+                <h2>担任田径运动会工作人员</h2>
+                <p>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp担任运动会的工作人员，帮助记录成绩并为运动会做准备，通过参加这次运动会，体验到在背后默默付出的艰辛与不易，也感受到了学校健儿的运动精神。
+                </p>
+                <h1>校外活动</h1>
+                <h2>手机卖场销售</h2>
+                <p>在课余时间经常找兼职，从事一些销售活动，在手机店中帮忙销售手机，通过和他人学习并且上网查找资料，自己整理出一些手机的特征和优势，在店内做手机销售员，在一天之中曾向买家推销出3部手机，学习到了一些销售的技巧和方法。</p>
+                <h2>辅导班宣传</h2>
+                <p>在某辅导班帮助宣传，和家长沟通辅导班的情况和优势，锻炼了自己的交流能力。</p>
+            </div>
+            <div id="footer">
+                <h1>My skill @崔海凤</h1>
+            </div>
+        </div>
+    </div>
+    <script>
+        var oTurns = document.getElementById("turns");
+        var oImgs = document.getElementById("imgs");
+        var aImg = oImgs.getElementsByTagName("img");
+        var oNumber = document.getElementById("number");
+        var aLi = oNumber.getElementsByTagName("li");
+        var oLeft = document.getElementById("left");
+        var oRight = document.getElementById("right");
+        var nowIndex = 0;
+        var time;
+        for(var i=0;i<aLi.length;i++){
+            aLi[i].index = i;
+            aLi[i].onmouseover = function(){
+                nowIndex = this.index;
+                changeImg();
+            }
+        }
+        oRight.onclick = oLeft.onclick = function(){
+            if(this == oRight){
+                nowIndex++;
+                if(nowIndex == aLi.length){
+                    nowIndex = 0;
+                }
+            }else{
+                nowIndex --;
+                if(nowIndex == -1){
+                    nowIndex = aLi.length-1;
+                }
+            }
+            changeImg();
+        };
+        function changeImg(){
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].className = "";
+                aImg[i].className = "";
+            }
+            aLi[nowIndex].className = "selected";
+            aImg[nowIndex].className = "selected";
+        }
+        play();
+        function play (){
+            time = setInterval(function(){
+                oRight.onclick();
+            },1000);
+        }
+        oTurns.onmouseover = function(){
+            clearInterval(time);
+        };
+        oTurns.onmouseout = function(){
+            play();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+    <div id="container">
+        <div class="wrap">
+            <div id="pic-logo" class="clearfix">
+                <img id="pic" src="image/48.png" alt=""/>
+                <div id="logo">
+                    <ul class="intro">
+                        <li><a href="enter.html">首&nbsp&nbsp&nbsp&nbsp页</a></li>
+                        <li class="selected"><a href="index.html">基本资料</a></li>
+                        <li><a href="hobby.html">个人爱好</a></li>
+                        <li><a href="skill.html">个人技能</a></li>
+                        <li><a href="activity.html">参加活动</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="banner">
+                <h1>personal introduce</h1>
+            </div>
+            <div id="content">
+                <div class="edge left">
+                    <div class="photo"></div>
+                    <ul class="basic">
+                        <li>姓名： 崔海凤</li>
+                        <li>学号： 150208202</li>
+                        <li>学校： 郑州航空大学</li>
+                        <li>学院： 工商管理学院</li>
+                        <li>专业： 市场营销</li>
+                        <li>班级： 市场营销专业15-2班</li>
+
+                    </ul>
+                    <p>性格： 开朗外向 活泼可爱 &nbsp&nbsp 阳光向上 喜欢笑 喜欢交流</p>
+                </div>
+                <div class="center">
+                    <div class="img"></div>
+                    <div class="basic">
+                        <h2>我的感悟</h2>
+                        <p>世界上有很多人，每个人都有自己的追求，对于生活和学习，我有了自己的想法和感悟，我觉得人要对自己有自信，灿烂的笑容，微笑的面孔，认真地做好自己应该做的事，朝着自己的目标努力，即使它很远，但是在追梦的过程中是快乐的，所以我会继续加油</p>
+                        <ul id="icons">
+                            <li><a href="index.html"><img src="image/db_qq.jpg" alt=""/></a></li>
+                            <li><a href="index.html"><img src="image/db_yx.jpg" alt=""/></a></li>
+                            <li><a href="index.html"><img src="image/db_wb.jpg" alt=""/></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="edge right">
+                    <ul class="basic">
+                        <li>生日： 1996-12-14</li>
+                        <li>星座： 射手座</li>
+                        <li>血型： O型</li>
+                        <li>籍贯： 辽宁省锦州市</li>
+                        <li>QQ&nbsp&nbsp&nbsp:  &nbsp1757217071</li>
+                    </ul>
+                    <p class="p1">座右铭：比你优秀的人不可怕,可怕的是比你优秀的人比你更努力</p>
+                    <p class="p2">梦想： 希望能在学校中得到充分的锻炼，提高自己的能力，最后得到满意的成绩，找到自己喜欢的工作</p>
+                </div>
+            </div>
+            <div id="footer">
+                <h1>About Me @崔海凤</h1>
+            </div>
+        </div>
+    </div>
+    <script>
+        var oBanner = document.getElementById("banner");
+        var aLi = oBanner.getElementsByTagName("li");
+        for(var i=0;i<aLi.length;i++){
+            aLi[i].index = i;
+            aLi[i].onclick = function(){
+                for(var i=0;i<aLi.length;i++){
+                    aLi[i].className = "";
+                }
+                this.className = "selected";
+            }
+        }
+    </script>
+</body>
+</html>

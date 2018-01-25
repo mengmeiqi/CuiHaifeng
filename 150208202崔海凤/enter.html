@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>enter</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/enter.css"/>
+</head>
+<body>
+    <div id="container">
+        <div id="cui">
+             <h1></h1>
+        </div>
+        <div id="enter">
+            <a href="index.html">click enter&gt&gt崔海凤</a>
+        </div>
+    </div>
+    <script>
+        var oCui = document.getElementById("cui");
+        var oH1 = oCui.getElementsByTagName("h1")[0];
+        var sentence = "MY PERSONAL WEBSITE.";
+        var aStr = [];
+        var index = 0;
+        for(var i=0;i<sentence.length;i++){
+            var oSentence = sentence.charAt(i);
+            aStr.push(oSentence);
+            aStr[i].index = index;
+        }
+        var str = "";
+        function Obtain(){
+            str = str + aStr[index];
+            index++;
+            oH1.innerHTML=str;
+        }
+        var timer = setInterval(function(){
+            Obtain();
+            if(index == aStr.length){
+                clearInterval(timer);
+            }
+        },300);
+    </script>
+</body>
+</html>

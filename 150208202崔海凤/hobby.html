@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>hobby</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/hobby.css"/>
+</head>
+<body>
+    <div id="container">
+        <div class="wrap">
+            <div id="logo">
+                <ul class="intro">
+                    <li><a href="enter.html">首&nbsp&nbsp&nbsp&nbsp页</a></li>
+                    <li><a href="index.html">基本资料</a></li>
+                    <li class="selected"><a href="hobby.html">个人爱好</a></li>
+                    <li><a href="skill.html">个人技能</a></li>
+                    <li><a href="activity.html">参加活动</a></li>
+                </ul>
+            </div>
+            <div class="banner">
+                <div class="banner-circle one">
+                    <div class="circle"><h1>跑步</h1></div>
+                    <div class="line"><div class="line-second"></div></div>
+                    <h3>Exercise makes me more active.<br/>运动充满活力</h3>
+                </div>
+                <div class="banner-circle two">
+                    <div class="circle"><h1>美食</h1></div>
+                    <div class="line"><div class="line-second"></div></div>
+                    <h3>It's a pleasure to enjoy good food.<br/>美食是一种享受</h3>
+                </div>
+                <div class="banner-circle three">
+                    <div class="circle"><h1>游戏</h1></div>
+                    <div class="line"><div class="line-second"></div></div>
+                    <h3>Leisure time playing games.<br/>休闲游戏时间</h3>
+                </div>
+                <div class="banner-circle four">
+                    <div class="circle"><h1>读书</h1></div>
+                    <div class="line"><div class="line-second"></div></div>
+                    <h3>Reading makes us progress.<br/>读书使我们进步</h3>
+                </div>
+            </div>
+            <div class="footer">
+                <h1>Hobby@崔海凤</h1>
+            </div>
+        </div>
+    </div>
+    <script>
+        var oLogo = document.getElementById("logo");
+        var aLi = oLogo.getElementsByTagName("li");
+        for(var i=0;i<aLi.length;i++){
+            aLi[i].index = i;
+            aLi[i].onclick = function(){
+                for(var i=0;i<aLi.length;i++){
+                    aLi[i].className = "";
+                }
+                this.className = "selected";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+    <div id="container">
+    <div class="wrap">
+        <div id="pic-logo" class="clearfix">
+            <img id="pic" src="image/09.png" alt=""/>
+            <div id="logo">
+                <ul class="intro">
+                    <li><a href="enter.html">HOME</a></li>
+                    <li class="selected"><a href="index.html">ABOUT</a></li>
+                    <li><a href="hobby.html">HOBBY</a></li>
+                    <li><a href="skill.html">SKILL</a></li>
+                    <li><a href="activity.html">ACTIVITY</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="banner">
+            <h1>个人网页设计</h1>
+        </div>
+        <div id="content">
+            <div class="edge left">
+                <div class="photo"></div>
+                <ul class="basic">
+                    <li>Name： 张士林</li>
+                    <li>Gender： 男</li>
+                    <li>HomeTown： 商丘市夏邑县</li>
+                    <li>Age： 我老了</li>
+                    <li>Hobby： 篮球、看书</li>
+                    <li>Address： </li>
+                    <li>郑州航空工业管理学院东校区</li>
+                </ul>
+            </div>
+            <div class="center">
+                <div class="img"></div>
+                <div class="basic">
+                    <h2>名人名言</h2>
+                    <p>生活赋予我们一种巨大的和无限高贵的礼品，这就是青春：充满着力量，充满着期待志愿，充满着求知和斗争的志向，充满着希望信心和青春。 —— 奥斯特洛夫斯基</p>
+                </div>
+            </div>
+            <div class="edge right">
+                <div class="photo"></div>
+                <ul class="basic">
+                    <li>QQ： 542445697</li>
+                    <li>邮箱： 542445697@qq.com</li>
+                </ul>
+                <ul id="icons">
+                    <li><a href="index.html"><img src="image/db_qq.jpg" alt=""/></a></li>
+                    <li><a href="index.html"><img src="image/db_yx.jpg" alt=""/></a></li>
+                    <li><a href="index.html"><img src="image/db_wb.jpg" alt=""/></a></li>
+                </ul>
+                <button class="top">CONTACT ME</button>
+                <button class="bottom">DOWNLOAD</button>
+            </div>
+        </div>
+        <div id="footer">
+            <h1>I'm SHILIN ZHANG 张士林</h1>
+        </div>
+    </div>
+</div>
+    <script>
+    var oBanner = document.getElementById("banner");
+    var aLi = oBanner.getElementsByTagName("li");
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].index = i;
+        aLi[i].onclick = function(){
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].className = "";
+            }
+            this.className = "selected";
+        }
+    }
+</script>
+</body>
+</html>

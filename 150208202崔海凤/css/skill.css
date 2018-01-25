@@ -1,0 +1,204 @@
+body{
+    background: rgba(200,200,230,0.4);
+}
+#container{
+    background: url(../image/26.png);
+    background-size:cover;
+    height:1100px;
+    width:1200px;
+    margin:40px auto;
+    position:relative;
+}
+
+#banner{
+    height:50px;
+    margin-bottom: 30px;
+}
+.intro{
+    height:50px;
+}
+.intro li{
+    float:left;
+    width:230px;
+    padding:3px;
+    border:2px solid #FFFFFF;
+    cursor:pointer;
+    text-align: center;
+}
+.intro a{
+    line-height:45px;
+    color: #ffffff;
+    font-size: 20px;
+}
+.selected{
+    background: rgba(0,0,0,0.4);
+}
+#content{
+    width:750px;
+    height:280px;
+    position:absolute;
+    top:70px;
+    left:50%;
+    margin-left:-375px;
+}
+#content h1{
+    line-height: 70px;
+    text-align:center;
+    font-weight: 500;
+}
+#process{
+    width:750px;
+    height:210px;
+}
+#process li{
+    height:30px;
+    padding:5px;
+    width:740px;
+}
+#content .word{
+    float:left;
+    width:290px;
+    height:30px;
+    line-height:30px;
+    font-size: 20px;
+    color: #000;
+}
+#content .bar{
+    height:26px;
+    width:446px;
+    border:2px #CCCCCC solid;
+    float:left;
+}
+.bar-content{
+    background:#95CA0a;
+    float:left;
+    height:100%;
+    text-align:center;
+    line-height:150%;
+}
+.one{
+    animation:onex 2s linear 1s forwards;
+}
+@-webkit-keyframes onex{
+    from{
+        width:0;
+    }
+    to{
+        width:85%;
+    }
+}
+@-ms-keyframes onex{
+    from{
+        width:0;
+    }
+    to{
+        width:85%;
+    }
+}
+.two{
+    animation:twox 2s linear 1s forwards;
+}
+@-webkit-keyframes twox{
+    from{
+        width:0;
+    }
+    to{
+        width:88%;
+    }
+}
+@-ms-keyframes twox{
+    from{
+        width:0;
+    }
+    to{
+        width:88%;
+    }
+}
+.three{
+    animation:threex 2s linear 1s forwards;
+}
+@-webkit-keyframes threex{
+    from{
+        width:0;
+    }
+    to{
+        width:90%;
+    }
+}
+@-ms-keyframes threex{
+    from{
+        width:0;
+    }
+    to{
+        width:90%;
+    }
+}
+.four{
+    animation:fourx 2s linear 1s forwards;
+}
+@-webkit-keyframes fourx{
+    from{
+        width:0;
+    }
+    to{
+        width:81%;
+    }
+}
+@-ms-keyframes fourx{
+    from{
+        width:0;
+    }
+    to{
+        width:81%;
+    }
+}
+.five{
+    animation:fivex 2s linear 1s forwards;
+}
+@-webkit-keyframes fivex{
+    from{
+        width:0;
+    }
+    to{
+        width:83%;
+    }
+}
+@-ms-keyframes fivex{
+    from{
+        width:0;
+    }
+    to{
+        width:83%;
+    }
+}
+#explain h1{
+    line-height: 70px;
+    text-align:center;
+    font-weight: 500;
+
+}
+#explain h3{
+    font-size: 20px;
+    height:40px;
+    line-height:40px;
+    text-align: left;
+    /*margin-left: 300px;*/
+    font-weight: 500;
+    color: #398439;
+}
+#explain p{
+    line-height:30px;
+    color: #398439;
+}
+#footer{
+    height:80px;
+    border:2px #fff solid;
+    width:1196px;
+    position:absolute;
+    bottom:20px;
+}
+#footer h1{
+    line-height:80px;
+    text-align:center;
+    color:#fff;
+}
